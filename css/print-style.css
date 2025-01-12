@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .print-controls {
+    margin-bottom: 20px;
+  }
+  
+  .print-controls h2 {
+    margin-bottom: 10px;
+  }
+  
+  .print-controls label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .print-controls select, .print-controls input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .print-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .print-button:hover {
+    background: #0056b3;
+  }
+  
+  .print-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: white;
+    transform-origin: top left; /* Ensures scaling happens around top-left corner */
+  }
+  
+  .print-header,
+  .print-footer {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Black & White Print Styles */
+  .black-and-white {
+    filter: grayscale(100%);
+  }
+  
+  /* Print Styles */
+  @media print {
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .print-controls {
+      display: none; /* Hide controls during print */
+    }
+  
+    .print-content {
+      width: 100%;
+      padding: 20mm;
+      box-sizing: border-box;
+    }
+  
+    /* Default page size and layout */
+    @page {
+      margin: 20mm;
+    }
+  }
+  
